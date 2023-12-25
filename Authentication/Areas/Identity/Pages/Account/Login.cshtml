@@ -1,0 +1,73 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+   
+}
+<div class="overlay-container">
+    <div class="overlay">
+        @*  <div class="overlay-panel overlay-left">
+        <h1>Welcome Back! Thedc</h1>
+        <p>Please login your personal info</p>
+
+        <div class="group button-group">
+        <button class="ghost" id="signUp">Sign in</button>
+        </div>
+
+        </div> *@
+
+        <div class="overlay-panel overlay-right">
+            <h1>Hello, Friend!</h1>
+            <p>Enter your personal details and start your journey with us</p>
+
+            <div class="group button-group">
+                <button class="ghost" id="signIn">Sign up</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" id="container">
+<div  class="form-container  sign-in-container" id="sign__in">
+            <form id="account" method="post">
+        <div class="header">Sign In</div>
+        <span class="under__social">
+           
+        </span>
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="group button-group">
+                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="Email" />
+                  
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+            <div class="group button-group">
+                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="Password" />
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+@*                 <div class="group input-group">
+                    <label asp-for="Input.RememberMe" class="form-label">
+                        <input class="form-check-input" asp-for="Input.RememberMe" />
+                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                    </label>
+                </div> *@
+                <div class="group button-group">
+                    <button  id="login-submit" type="submit" class="signin-btn">Log in</button>
+                </div>
+      
+            </form>
+        
+  
+</div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
+
+
+<script>
+    document.getElementById('signIn').addEventListener('click', function () {
+        window.location.href = '@Url.Content("~/Identity/Account/Register")';
+    });
+</script>

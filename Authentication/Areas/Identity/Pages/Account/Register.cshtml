@@ -1,0 +1,83 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+
+}
+<div class="container" id="container">
+    <form class="form-container   " id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+    <h2 style="margin-bottom:10px;" class="header">Create a new account.</h2>
+ 
+    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+    <div class ="button-input-group">
+        
+            <div class="group button-group">
+                <input asp-for="Input.FirstName" class="form-control" autocomplete="firstname" aria-required="true" placeholder="First Name" />
+           
+            </div>
+       
+       
+            <div class="group button-group">
+                <input asp-for="Input.LastName" class="form-control" autocomplete="lastname" aria-required="true" placeholder="Last Name" />
+   
+            </div>
+       
+    </div>
+    <div class="group button-group">
+        <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="Email" />
+     
+        <span asp-validation-for="Input.Email" class="text-danger"></span>
+    </div>
+    <div class="group button-group">
+        <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Password" />
+        
+        <span asp-validation-for="Input.Password" class="text-danger"></span>
+    </div>
+    <div class="group button-group">
+        <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Confirm Password" />
+       
+        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+    </div>
+        <div class="group button-group">
+           @*  <button class="signup-btn" onclick="return false;">Sign Up</button> *@
+            <button id="registerSubmit" type="submit" class="signup-btn">Sign Up</button>
+        </div>
+       
+</form>
+</div>
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
+<div class="overlay-container">
+    <div class="overlay">
+        <div class="overlay-panel overlay-right">
+            <h1>Welcome Back!</h1>
+            <p>Please login your personal info</p>
+
+            <div class="group button-group">
+                <button class="ghost" id="signUp">Sign in</button>
+            </div>
+        </div>
+
+      @*   <div class="overlay-panel overlay-left">
+            <h1>Hello, Friend!</h1>
+            <p>Enter your personal details and start your journey with us</p>
+
+            <div class="group button-group">
+                <button class="ghost" id="signUp">Sign in</button>
+            </div>
+           
+        </div> *@
+    </div>
+</div>
+
+<script>
+    document.getElementById('signUp').addEventListener('click', function () {
+        window.location.href = '@Url.Content("~/Identity/Account/Login")';
+    });
+</script>
