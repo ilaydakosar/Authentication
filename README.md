@@ -1,14 +1,41 @@
 This is a demo project for demonstrating User Authentication and Autherization in Asp.Net Core MVC Project with Identity UI.
 
-Points discussed :
+This README provides a comprehensive guide on customizing ASP.NET Core Identity in your application. It covers everything from adding Identity to your project, modifying user properties and password validations, to implementing authorization and displaying user details.
 
-How it Identity UI Works
-Add Asp.Net Core Identity
-Add New Properties to Identity
-Modify Password Validations
-Display Logged In User Details in App NavBar
-Login Form
-Retrive logged in user id or user claims
-Autherization
-How to Customize Further, etc
+## Table of Contents
+- [Adding ASP.NET Core Identity](#adding-aspnet-core-identity)
+- [Adding New Properties to Identity](#adding-new-properties-to-identity)
+- [Modifying Password Validations](#modifying-password-validations)
+- [Displaying Logged-In User Details](#displaying-logged-in-user-details)
+- [Creating a Login Form](#creating-a-login-form)
+- [Retrieving Logged-In User Information](#retrieving-logged-in-user-information)
+- [Implementing Authorization](#implementing-authorization)
+- [Customization Tips](#customization-tips)
 
+## Adding ASP.NET Core Identity
+Explain how to add ASP.NET Core Identity to your project. Include necessary NuGet packages and configuration steps.
+
+## Adding New Properties to Identity
+Guide on how to extend the IdentityUser class with custom properties.
+
+## Modifying Password Validations
+Instructions on how to customize password strength requirements and validations.
+
+## Displaying Logged-In User Details
+Describe how to display logged-in user information (like username or email) in the application's navigation bar.
+
+## Creating a Login Form
+Step-by-step guide to creating a user-friendly login form.
+
+## Retrieving Logged-In User Information
+Show how to retrieve the logged-in user's ID and claims for use throughout the application.
+
+## Implementing Authorization
+Discuss different authorization techniques, such as role-based and policy-based authorization.
+
+## Customization Tips
+Share additional tips and best practices for customizing and extending ASP.NET Core Identity.
+
+---
+
+Feel free to contribute to this guide by submitting pull requests or opening issues for discussion.
