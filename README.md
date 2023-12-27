@@ -1,7 +1,5 @@
 This is a demo project for demonstrating User Authentication and Autherization in Asp.Net Core MVC Project with Identity UI.
 
-This README provides a comprehensive guide on customizing ASP.NET Core Identity in your application. It covers everything from adding Identity to your project, modifying user properties and password validations, to implementing authorization and displaying user details.
-
 ## Table of Contents
 - [Adding ASP.NET Core Identity](#adding-aspnet-core-identity)
 - [Adding New Properties to Identity](#adding-new-properties-to-identity)
